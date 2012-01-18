@@ -8,6 +8,7 @@ public class main {
 		// TODO Auto-generated method stub
 		System.out.println("Subversion, tu antes molabas");
 		System.out.println("weee");
+		System.out.println("weee");
 
 	}
 
