@@ -12,7 +12,7 @@ public class Partido {
 	}
 	
 	public void jugarPartido(){
-		Juego partido = new Juego();
+		Juego partido = new Juego(getManager(0).getEquipo(),getManager(1).getEquipo());
 		partido.jugar();
 	}
 	
