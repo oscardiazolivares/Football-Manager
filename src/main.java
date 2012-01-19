@@ -9,6 +9,7 @@ public class main {
 		System.out.println("weee");
 		System.out.println("weee");
 		System.out.println("probando edit github");
+		int a = 0;
 
 	}
 
