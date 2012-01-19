@@ -10,6 +10,8 @@ public class main {
 		System.out.println("weee");
 		System.out.println("probando edit github");
 		int a = 0;
+		int b = 0;
+		b= 3;
 
 	}
 
