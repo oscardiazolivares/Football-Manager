@@ -14,6 +14,9 @@ public class Convocados {
 		if (nombreEquipo == "betis") {
 			//Si el equipo es el betis, cargo los jugadores del betis en el arraylist
 		}
+		if (nombreEquipo == "at madrid")  {
+			//Si el equipo es el atlético de madrid, cargo los jugadores del mismo en el arraylist
+		}
 	}
 	
 	public int calcularAtaque() {
@@ -76,20 +79,24 @@ public class Convocados {
 			SumaTecDel = SumaTecDel + delanteros.get(i).tecnica;
 		}
 		//Recorro la lista de centrocampistas desde el 0 hasta el tamaño de la lista
-		int SumaDefCen = 0;
+		int SumaTecCen = 0;
 		for(int i=0;i<centrocampistas.size();i++) {
-			//Sumo consecutivamente la defensa de cada centrocampista
-			SumaDefCen = SumaDefCen + centrocampistas.get(i).defensa;
+			//Sumo consecutivamente la tecnica de cada centrocampista
+			SumaTecCen = SumaTecCen + centrocampistas.get(i).tecnica;
 		}
 		//Recorro la lista de defensas desde el 0 hasta el tamaño de la lista
-		int SumaDefDef = 0;
+		int SumaTecDef = 0;
 		for(int i=0;i<defensas.size();i++) {
-			//Sumo consecutivamente la defensa de cada defensa
-			SumaDefDef = SumaDefDef + defensas.get(i).defensa;
+			//Sumo consecutivamente la tecnica de cada defensa
+			SumaTecDef = SumaTecDef + defensas.get(i).tecnica;
 		}
-		//DefensaTotal = [(SumaDefDel*0.5)+(SumaDefCen*0.3)+(SumaDefDef*0.2)]/10
-		defensaTotal= (SumaDefDel*0.5+SumaDefCen*0.3+SumaDefDef*0.2)/10;
-		return (int)defensaTotal;
+		//TecnicaTotal = [(SumaTecDel*0.5)+(SumaTecCen*0.3)+(SumaTecDef*0.2)]/10
+		tecnicaTotal= (SumaTecDel*0.5+SumaTecCen*0.3+SumaTecDef*0.2)/10;
+		return (int)tecnicaTotal;
+	}
+	
+	public int calcularPortero () {
+		return portero.getHabilidadPortero();
 	}
 
 	private int[] getFormacion() {
