@@ -10,14 +10,13 @@ public class Futbolista {
 	int resistenciaLesiones;
 	boolean sancion;
 	int agresividad;
-	int fatiga;
 	int habilidadPortero;
 	String posicion;
 	boolean expulsion;
 	
 	public Futbolista(int id, String nombre, boolean lesion, int tarjetas,
 			int ataque, int defensa, int tecnica, int resistenciaLesiones,
-			boolean sancion, int agresividad, int fatiga, int habilidadPortero,
+			boolean sancion, int agresividad, int habilidadPortero,
 			String posicion, boolean expulsion) {
 		this.id = id;
 		this.nombre = nombre;
@@ -29,7 +28,6 @@ public class Futbolista {
 		this.resistenciaLesiones = resistenciaLesiones;
 		this.sancion = sancion;
 		this.agresividad = agresividad;
-		this.fatiga = fatiga;
 		this.habilidadPortero = habilidadPortero;
 		this.posicion = posicion;
 		this.expulsion = expulsion;
@@ -113,14 +111,6 @@ public class Futbolista {
 
 	private void setAgresividad(int agresividad) {
 		this.agresividad = agresividad;
-	}
-
-	public int getFatiga() {
-		return fatiga;
-	}
-
-	private void setFatiga(int fatiga) {
-		this.fatiga = fatiga;
 	}
 
 	public int getHabilidadPortero() {
