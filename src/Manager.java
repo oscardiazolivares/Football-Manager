@@ -1,9 +1,9 @@
 public class Manager {
 
-	// Equipo equipo;
+	Equipo equipo;
 	Boolean humano;
 
-	public Manager(/* Equipo equipo, */Boolean humano) {
+	public Manager(Equipo equipo, Boolean humano) {
 		setHumano(humano);
 	}
 
@@ -13,6 +13,10 @@ public class Manager {
 
 	public void setHumano(Boolean humano) {
 		this.humano = humano;
+	}
+	
+	public Equipo getEquipo(){
+		return equipo;
 	}
 
 }

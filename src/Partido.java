@@ -7,7 +7,7 @@ public class Partido {
 		this.managers = managers;
 	}
 	
-	public Managers getManager(int posicion){
+	public Manager getManager(int posicion){
 		return managers[posicion];
 	}
 	
