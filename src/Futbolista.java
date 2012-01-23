@@ -55,7 +55,7 @@ public class Futbolista {
 		return lesion;
 	}
 
-	private void setLesion(boolean lesion) {
+	public void setLesion(boolean lesion) {
 		this.lesion = lesion;
 	}
 
