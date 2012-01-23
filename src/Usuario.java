@@ -1,5 +1,3 @@
-package src;
-
 public class Usuario {
 
 	Opciones opciones;
@@ -20,7 +18,7 @@ public class Usuario {
 	
 	/*void definirOpciones() {
 		
-	} No se sabe por el momento si se incluirá */
+	} No se sabe por el momento si se incluirï¿½ */
 
 	void salir() {
 		System.exit(0);

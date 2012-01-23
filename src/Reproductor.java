@@ -1,5 +1,3 @@
-package src;
-
 //Reproducir un MP3 en Java
 import java.io.*;
 import java.io.BufferedInputStream;

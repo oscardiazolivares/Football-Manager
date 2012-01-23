@@ -1,5 +1,3 @@
-package src;
-
 public class Sonido {
 
 	String cancion;

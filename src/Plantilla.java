@@ -8,6 +8,7 @@ public class Plantilla {
 	public Plantilla (String nombreEquipo) {
 		if (nombreEquipo == "betis") {
 			//Si el equipo es el betis, cargo los jugadores del betis en el arraylist
+			
 		}
 		
 	}
