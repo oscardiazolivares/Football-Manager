@@ -63,7 +63,7 @@ public class Futbolista {
 		return tarjetas;
 	}
 
-	private void setTarjetas(int tarjetas) {
+	public void setTarjetas(int tarjetas) {
 		this.tarjetas = tarjetas;
 	}
 
@@ -103,7 +103,7 @@ public class Futbolista {
 		return sancion;
 	}
 
-	private void setSancion(boolean sancion) {
+	public void setSancion(boolean sancion) {
 		this.sancion = sancion;
 	}
 
