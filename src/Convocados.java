@@ -22,76 +22,94 @@ public class Convocados {
 	public int calcularAtaque() {
 		double ataqueTotal=0;
 		//Recorro la lista de delanteros desde el 0 hasta el tamaño de la lista
-		int SumaAtDel = 0;
+		int atDel = 0;
 		for(int i=0;i<delanteros.size();i++) {
 			//Sumo consecutivamente el ataque de cada delantero
-			SumaAtDel = SumaAtDel + delanteros.get(i).ataque;
+			atDel = atDel + delanteros.get(i).ataque;
+			//Ahora se calcula la media de ataque de los delanteros
+			atDel = atDel / delanteros.size();
 		}
 		//Recorro la lista de centrocampistas desde el 0 hasta el tamaño de la lista
-		int SumaAtCen = 0;
+		int atCen = 0;
 		for(int i=0;i<centrocampistas.size();i++) {
 			//Sumo consecutivamente el ataque de cada centrocampista
-			SumaAtCen = SumaAtCen + centrocampistas.get(i).ataque;
+			atCen = atCen + centrocampistas.get(i).ataque;
+			//Ahora se calcula la media de ataque de los centrocampistas
+			atCen = atCen / centrocampistas.size();
 		}
 		//Recorro la lista de defensas desde el 0 hasta el tamaño de la lista
-		int SumaAtDef = 0;
+		int atDef = 0;
 		for(int i=0;i<defensas.size();i++) {
 			//Sumo consecutivamente el ataque de cada defensa
-			SumaAtDef = SumaAtDef + defensas.get(i).ataque;
+			atDef = atDef + defensas.get(i).ataque;
+			//Ahora se calcula la media de ataque de los defensas
+			atDef = atDef / defensas.size();
 		}
 		//AtaqueTotal = [(SumaAtDel*0.5)+(SumaAtCen*0.3)+(SumaAtDef*0.2)]/10
-		ataqueTotal= (SumaAtDel*0.5+SumaAtCen*0.3+SumaAtDef*0.2)/10;
+		ataqueTotal= atDel*0.5+atCen*0.3+atDef*0.2;
 		return (int)ataqueTotal;
 	}
 	
 	public int calcularDefensa() {
 		double defensaTotal=0;
 		//Recorro la lista de delanteros desde el 0 hasta el tamaño de la lista
-		int SumaDefDel = 0;
+		int defDel = 0;
 		for(int i=0;i<delanteros.size();i++) {
 			//Sumo consecutivamente la defensa de cada delantero
-			SumaDefDel = SumaDefDel + delanteros.get(i).defensa;
+			defDel = defDel + delanteros.get(i).defensa;
+			//Ahora se calcula la media de defensa de los delanteros
+			defDel = defDel / delanteros.size();
 		}
 		//Recorro la lista de centrocampistas desde el 0 hasta el tamaño de la lista
-		int SumaDefCen = 0;
+		int defCen = 0;
 		for(int i=0;i<centrocampistas.size();i++) {
 			//Sumo consecutivamente la defensa de cada centrocampista
-			SumaDefCen = SumaDefCen + centrocampistas.get(i).defensa;
+			defCen = defCen + centrocampistas.get(i).defensa;
+			//Ahora se calcula la media de defensa de los centrocampistas
+			defCen = defCen / centrocampistas.size();
 		}
 		//Recorro la lista de defensas desde el 0 hasta el tamaño de la lista
-		int SumaDefDef = 0;
+		int defDef = 0;
 		for(int i=0;i<defensas.size();i++) {
 			//Sumo consecutivamente la defensa de cada defensa
-			SumaDefDef = SumaDefDef + defensas.get(i).defensa;
+			defDef = defDef + defensas.get(i).defensa;
+			//Ahora se calcula la media de defensa de los defensas
+			defDef = defDef / defensas.size();
 		}
 
 		//DefensaTotal = [(SumaDefDel*0.5)+(SumaDefCen*0.3)+(SumaDefDef*0.2)]/10
-		defensaTotal= (SumaDefDel*0.5+SumaDefCen*0.3+SumaDefDef*0.2)/10;
+		defensaTotal= defDel*0.2+defCen*0.3+defDef*0.5;
 		return (int)defensaTotal;
 	}
 	
 	public int calcularTecnica() {
 		double tecnicaTotal=0;
 		//Recorro la lista de delanteros desde el 0 hasta el tamaño de la lista
-		int SumaTecDel = 0;
+		int tecDel = 0;
 		for(int i=0;i<delanteros.size();i++) {
 			//Sumo consecutivamente la tecnica de cada delantero
-			SumaTecDel = SumaTecDel + delanteros.get(i).tecnica;
+			tecDel = tecDel + delanteros.get(i).tecnica;
+			//Ahora se calcula la media de tecnica de los delanteros
+			tecDel = tecDel / delanteros.size();
 		}
 		//Recorro la lista de centrocampistas desde el 0 hasta el tamaño de la lista
-		int SumaTecCen = 0;
+		int tecCen = 0;
 		for(int i=0;i<centrocampistas.size();i++) {
 			//Sumo consecutivamente la tecnica de cada centrocampista
-			SumaTecCen = SumaTecCen + centrocampistas.get(i).tecnica;
+			tecCen = tecCen + centrocampistas.get(i).tecnica;
+			//Ahora se calcula la media de tecnica de los centrocampistas
+			tecCen = tecCen / centrocampistas.size();
 		}
 		//Recorro la lista de defensas desde el 0 hasta el tamaño de la lista
-		int SumaTecDef = 0;
+		int tecDef = 0;
 		for(int i=0;i<defensas.size();i++) {
 			//Sumo consecutivamente la tecnica de cada defensa
-			SumaTecDef = SumaTecDef + defensas.get(i).tecnica;
+			tecDef = tecDef + defensas.get(i).tecnica;
+			//Ahora se calcula la media de tecnica de los defensas
+			tecDef = tecDef / defensas.size();
 		}
 		//TecnicaTotal = [(SumaTecDel*0.5)+(SumaTecCen*0.3)+(SumaTecDef*0.2)]/10
-		tecnicaTotal= (SumaTecDel*0.5+SumaTecCen*0.3+SumaTecDef*0.2)/10;
+		tecnicaTotal= (tecDel*0.3+tecCen*0.5+tecDef*0.2)/10;
 		return (int)tecnicaTotal;
 	}
 	
@@ -99,47 +117,47 @@ public class Convocados {
 		return portero.getHabilidadPortero();
 	}
 
-	private int[] getFormacion() {
+	public int[] getFormacion() {
 		return formacion;
 	}
 
-	private void setFormacion(int[] formacion) {
+	public void setFormacion(int[] formacion) {
 		this.formacion = formacion;
 	}
 
-	private Futbolista getPortero() {
+	public Futbolista getPortero() {
 		return portero;
 	}
 
-	private void setPortero(Futbolista portero) {
+	public void setPortero(Futbolista portero) {
 		this.portero = portero;
 	}
 
-	private List<Futbolista> getDefensas() {
+	public List<Futbolista> getDefensas() {
 		return defensas;
 	}
 
-	private void setDefensas(List<Futbolista> defensas) {
+	public void setDefensas(List<Futbolista> defensas) {
 		this.defensas = defensas;
 	}
 
-	private List<Futbolista> getCentrocampistas() {
+	public List<Futbolista> getCentrocampistas() {
 		return centrocampistas;
 	}
 
-	private void setCentrocampistas(List<Futbolista> centrocampistas) {
+	public void setCentrocampistas(List<Futbolista> centrocampistas) {
 		this.centrocampistas = centrocampistas;
 	}
 
-	private List<Futbolista> getDelanteros() {
+	public List<Futbolista> getDelanteros() {
 		return delanteros;
 	}
 
-	private void setDelanteros(List<Futbolista> delanteros) {
+	public void setDelanteros(List<Futbolista> delanteros) {
 		this.delanteros = delanteros;
 	}
 
-	private Plantilla getPlantilla() {
+	public Plantilla getPlantilla() {
 		return plantilla;
 	}
 	

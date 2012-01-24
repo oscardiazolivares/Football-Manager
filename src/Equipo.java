@@ -6,9 +6,7 @@ public class Equipo {
 	
 	Equipo(String nombre){
 		this.nombre = nombre;
-		alineacion = new Convocados(nombre);
-
-		
+		alineacion = new Convocados(nombre);		
 	}
 
 	public String getNombre() {
