@@ -15,6 +15,29 @@ public class Convocados {
 	public Convocados (String nombreEquipo) {
 		if (nombreEquipo == "betis") {
 			//Si el equipo es el betis, cargo los jugadores del betis en el arraylist
+			banquillo.add(new Futbolista(19, "Goitia", false, 0, 30, 79, 45, 85, false, 73, 79, "pt", false));
+			 portero = new Futbolista(19, "Casto", false, 0, 30, 78, 53, 80, false, 71, 77, "pt", false);
+			
+			defensas.add(new Futbolista(19, "Dorado", false, 0, 55, 75, 68, 75, false, 73, 50, "df", false));
+			defensas.add(new Futbolista(19, "Ustariz", false, 0, 54, 77, 69, 90, false, 72, 50, "df", false));
+			defensas.add(new Futbolista(19, "A.Amaya", false, 0, 55, 75, 68, 80, false, 70, 50, "df", false));
+			defensas.add(new Futbolista(19, "Mario", false, 0, 55, 75, 67, 85, false, 75, 50, "df", false));
+			banquillo.add(new Futbolista(19, "Tosic", false, 0, 71, 72, 75, 80, false, 67, 50, "df", false));
+			banquillo.add(new Futbolista(19, "Chica", false, 0, 67, 68, 71, 75, false, 74, 50, "df", false));
+			
+			banquillo.add(new Futbolista(19, "J.Cañas", false, 0, 62, 61, 72, 80, false, 67, 50, "mc", false));
+			banquillo.add(new Futbolista(19, "S.Sevilla", false, 0, 68, 55, 78, 85, false, 72, 50, "mc", false));
+			centrocampistas.add(new Futbolista(19, "Beñat", false, 0, 66, 60, 79, 90, false, 73, 50, "mc", false));
+			banquillo.add(new Futbolista(19, "J.Cañas", false, 0, 62, 61, 72, 80, false, 67, 50, "mc", false));
+			centrocampistas.add(new Futbolista(19, "Iriney", false, 0, 67, 70, 77, 75, false, 71, 50, "mc", false));
+			centrocampistas.add(new Futbolista(19, "Matilla", false, 0, 70, 56, 80, 85, false, 66, 50, "mc", false));
+			banquillo.add(new Futbolista(19, "Juanma", false, 0, 73, 43, 77, 90, false, 70, 50, "mc", false));
+			banquillo.add(new Futbolista(19, "Momo", false, 0, 75, 45, 77, 80, false, 70, 50, "mc", false));
+			
+			delanteros.add(new Futbolista(19, "Santacruz", false, 0, 82, 46, 82, 85, false, 66, 50, "dl", false));
+			delanteros.add(new Futbolista(19, "J.Molina", false, 0, 77, 34, 77, 95, false, 70, 50, "dl", false));
+			delanteros.add(new Futbolista(19, "Ruben Castro", false, 0, 80, 35, 80, 90, false, 68, 50, "dl", false));
+			banquillo.add(new Futbolista(19, "J.Pereira", false, 0, 75, 32, 77, 80, false, 67, 50, "dl", false));
 		}
 		if (nombreEquipo == "at madrid")  {
 			//Si el equipo es el atlético de madrid, cargo los jugadores del mismo en el arraylist
