@@ -19,7 +19,7 @@ public class Convocados {
 		if (nombreEquipo == "at madrid")  {
 			//Si el equipo es el atlético de madrid, cargo los jugadores del mismo en el arraylist
 			banquillo.add(new Futbolista(1, "Asenjo", false, 0, 30, 82, 52, 75, false, 68, 84, "pt", false));
-			portero = new Futbolista(2, "Courtoris", false, 0, 30, 78, 59, 90, false, 68, 84, "pt", false));
+			portero = new Futbolista(2, "Courtoris", false, 0, 30, 78, 59, 90, false, 68, 84, "pt", false);
 			
 			
 			banquillo.add(new Futbolista(3, "JMiranda", false, 0, 54, 76, 67, 90, false, 74, 50, "df", false));
