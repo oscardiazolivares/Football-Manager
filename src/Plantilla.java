@@ -6,8 +6,8 @@ public class Plantilla {
 	List<Futbolista> listaFutbolistas = new ArrayList<Futbolista>();
 	
 	public Plantilla (String nombreEquipo) {
-		if (nombreEquipo == "betis") {
-			//Si el equipo es el betis, cargo los jugadores del betis en el arraylist
+		if (nombreEquipo == "at madrid") {
+			//Si el equipo es el at madrid, cargo los jugadores del at madrid en el arraylist
 			/* 1, NOMBRE, FALSE, 0, ATAQUE, DEFENSA, TECNICA, RESLESIONES, false, AGRESIVIDAD, HP, FALSE) */
 			listaFutbolistas.add(new Futbolista(1, "Asenjo", false, 0, 30, 82, 52, 75, false, 68, 84, "pt", false));
 			listaFutbolistas.add(new Futbolista(2, "Courtoris", false, 0, 30, 78, 59, 90, false, 68, 84, "pt", false));
@@ -32,8 +32,10 @@ public class Plantilla {
 			listaFutbolistas.add(new Futbolista(18, "Falcao", false, 0, 88, 38, 82, 95, false, 77, 50, "dl", false));
 			
 		}
-		if (nombreEquipo == "at madrid") {
-			//Si el equipo es el at de madrid, cargo los jugadores del atletico en el arraylist
+		if (nombreEquipo == "betis") {
+			//Si el equipo es el betis, cargo los jugadores del betis en el arraylist
+			listaFutbolistas.add(new Futbolista(19, "Goitia", false, 0, 30, 79, 45, 85, false, 73, 79, "pt", false));
+			
 		}
 		
 	}
