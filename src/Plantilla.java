@@ -72,13 +72,24 @@ public class Plantilla {
 		
 	}
 
-	private List<Futbolista> getListaFutbolistas() {
+	public List<Futbolista> getListaFutbolistas() {
 		return listaFutbolistas;
 	}
 	
-	private Futbolista getListaFutbolistas(int posicion) {
+	public Futbolista getListaFutbolistas(int posicion) {
 		//Método "get" para devolver el jugador que ocupe cierta posicion en la lista
 		List<Futbolista> futbolistasAux = new ArrayList<Futbolista>();
 		return futbolistasAux.get(posicion);
+	}
+	
+	public String[] getStringFutbolistas(){
+		int tamano = getListaFutbolistas().size();
+		String[] listado = new String[tamano];
+		
+		for (int i = 0; i < tamano; i++){
+			listado[i] = getListaFutbolistas().get(i).nombre;
+		}
+		
+		return listado;
 	}
 }

@@ -2,6 +2,7 @@ import javax.swing.*;
 
 public class InterfazOpcionesArchivo {
 	JFrame frameArchivo;
+	
 	JFileChooser jfc;
 	
 	InterfazOpcionesArchivo(){
