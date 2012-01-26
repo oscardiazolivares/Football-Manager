@@ -70,6 +70,7 @@ public class InterfazConvocados extends javax.swing.JFrame {
             public Object getElementAt(int i) { return strings[i]; }
         });
         jScrollPane1.setViewportView(listaJugadores);
+        
 
         bt2.setText(">>>>");
         bt2.addActionListener(new java.awt.event.ActionListener() {
@@ -279,8 +280,6 @@ public class InterfazConvocados extends javax.swing.JFrame {
 
     private void bt2ActionPerformed(java.awt.event.ActionEvent evt) {                                           
         listaPortero.setListData(listaJugadores.getSelectedValues());
-        listaJugadores.remove(listaJugadores.getSelectedIndex());
-        
     }                                   
 
     private void bt3ActionPerformed(java.awt.event.ActionEvent evt) {                                    
@@ -322,7 +321,7 @@ public class InterfazConvocados extends javax.swing.JFrame {
     }                                              
 
     private void btGuardarActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        this.setVisible(false);
     }
 
     // Variables declaration - do not modify
