@@ -14,6 +14,20 @@ public class Reproductor {
 	// constructor que tom ael nombre el arhivo MP3
 	public Reproductor(String filename) {
 		this.filename = filename;
+		this.play();
+
+		// establecemos el tiempo para procesar el sonido (milisegundos)
+		/*int N = 999999999;
+		double sum = 0.0;
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				sum += Math.sin(i + j);
+			}
+		}
+		System.out.println(sum);*/
+
+		// cuando el tiempo de proceso termina se detiene la reproduccion
+		//this.close();
 	}
 
 	public void close() {
@@ -50,43 +64,6 @@ public class Reproductor {
 
 	// prueba
 
-	public static void main(String[] args) {
-		String cadena = "";
-
-		/* INICIO BUSQUEDA DE ARCHIVOS */
-
-		/* FIN BUSQUEDA DE ARCHIVOS */
-
-		try {
-			System.out.println("Introduzca ruta del mp3: ");
-			InputStreamReader isr = new InputStreamReader(System.in);
-			BufferedReader br = new BufferedReader(isr);
-			cadena = br.readLine();
-		} catch (IOException e) {
-		}
-		String filename = cadena + ".mp3";
-
-		// nueva instancia de la clase MP3
-		Reproductor mp3 = new Reproductor(filename);
-		mp3.play();
-
-		// establecemos el tiempo para procesar el sonido (milisegundos)
-		int N = 999999999;
-		double sum = 0.0;
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				sum += Math.sin(i + j);
-			}
-		}
-		System.out.println(sum);
-
-		// cuando el tiempo de proceso termina se detiene la reproduccion
-		mp3.close();
-
-		// reproducir el mp3 desde el principio
-		mp3 = new Reproductor(filename);
-		mp3.play();
-
-	}
+	
 
 }

@@ -62,6 +62,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
     private void btNuevoAmistosoActionPerformed(java.awt.event.ActionEvent evt) {
         InterfazAmistoso ia = new InterfazAmistoso();
         ia.setVisible(true);
+        this.setVisible(false);
     }
 
     private void btOpcionesActionPerformed(java.awt.event.ActionEvent evt) {

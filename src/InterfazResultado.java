@@ -35,7 +35,7 @@ public class InterfazResultado extends javax.swing.JFrame {
         listaLesionados1 = new javax.swing.JList();
         btCambiar = new javax.swing.JButton();
         btJugarSiguiente = new javax.swing.JButton();
-        
+        btAceptar = new javax.swing.JButton("Aceptar");
         
         //Ponemos los resultados en las cajas de texto
         pantxtEquipo1.setText(String.valueOf(this.resultado[0]));
@@ -82,6 +82,14 @@ public class InterfazResultado extends javax.swing.JFrame {
                 btCambiarActionPerformed(evt);
             }
         });
+        
+        btAceptar.setText("Aceptar");
+        btAceptar.setVisible(false);
+        btAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAceptarActionPerformed(evt);
+            }
+        });
 
         btJugarSiguiente.setText("Jugar 2ª parte");
         btJugarSiguiente.addActionListener(new java.awt.event.ActionListener() {
@@ -105,6 +113,7 @@ public class InterfazResultado extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btCambiar)
+                        .addComponent(btAceptar)
                         .addGap(76, 76, 76)
                         .addComponent(btJugarSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -150,6 +159,7 @@ public class InterfazResultado extends javax.swing.JFrame {
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btCambiar)
+                    .addComponent(btAceptar)
                     .addComponent(btJugarSiguiente))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
@@ -160,6 +170,12 @@ public class InterfazResultado extends javax.swing.JFrame {
     private void btCambiarActionPerformed(java.awt.event.ActionEvent evt) {
         InterfazCambios ic = new InterfazCambios();
         ic.setVisible(true);
+    }
+    
+    private void btAceptarActionPerformed(java.awt.event.ActionEvent evt) {
+    	this.setVisible(false);
+    	InterfazPrincipal ip = new InterfazPrincipal();
+    	ip.setVisible(true);
     }
 
     private void btJugarSiguienteActionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,10 +188,12 @@ public class InterfazResultado extends javax.swing.JFrame {
         pantxtEquipo2.setText(String.valueOf(this.resultado[1]));
         btJugarSiguiente.setVisible(false);
         btCambiar.setVisible(false);
+        btAceptar.setVisible(true);
     }
 
     // Variables declaration - do not modify
     private javax.swing.JButton btCambiar;
+    private javax.swing.JButton btAceptar;
     private javax.swing.JButton btJugarSiguiente;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

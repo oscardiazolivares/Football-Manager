@@ -1,6 +1,7 @@
 public class InterfazOpciones extends javax.swing.JFrame {
 
-    /**
+    InterfazOpcionesArchivo ioa;
+	/**
      * Creates new form InterfazOpciones
      */
     public InterfazOpciones() {
@@ -33,7 +34,7 @@ public class InterfazOpciones extends javax.swing.JFrame {
 
         jLabel3.setText("Volumen");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] {"Español", "Galego"}));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -54,7 +55,7 @@ public class InterfazOpciones extends javax.swing.JFrame {
             }
         });
 
-        btCancelar.setText("Cancelar");
+        btCancelar.setText("Detener canción");
         btCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btCancelarActionPerformed(evt);
@@ -120,15 +121,23 @@ public class InterfazOpciones extends javax.swing.JFrame {
     }                                          
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        InterfazOpcionesArchivo ioa = new InterfazOpcionesArchivo();
+        if (ioa != null){
+        	ioa.rep.close();
+        }
+    	ioa = new InterfazOpcionesArchivo();
+  
     }                                        
 
     private void btAceptarActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        InterfazPrincipal ip = new InterfazPrincipal();
+        this.setVisible(false);
+        ip.setVisible(true);
     }
 
     private void btCancelarActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        if (ioa != null){
+        	ioa.rep.close();
+        }
     }
 
     /**

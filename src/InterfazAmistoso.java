@@ -175,6 +175,7 @@ public class InterfazAmistoso extends javax.swing.JFrame {
     	
     	InterfazResultado ir = new InterfazResultado(managers, amistoso.jugarPartido());
     	ir.setVisible(true);
+    	this.setVisible(false);
     }
 
     private void btVolverActionPerformed(java.awt.event.ActionEvent evt) {

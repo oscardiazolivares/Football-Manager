@@ -2,6 +2,7 @@ import javax.swing.*;
 
 public class InterfazOpcionesArchivo {
 	JFrame frameArchivo;
+	Reproductor rep;
 	
 	JFileChooser jfc;
 	
@@ -15,7 +16,11 @@ public class InterfazOpcionesArchivo {
 		if (op == JFileChooser.APPROVE_OPTION)
 			System.out.println(jfc.getSelectedFile());
 		
-		frameArchivo.setVisible(true);
+		String ruta = jfc.getSelectedFile().getPath();
+		
+		rep = new Reproductor(ruta);
+		
+		//frameArchivo.setVisible(true);
 		//frameArchivo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
