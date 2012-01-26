@@ -279,6 +279,8 @@ public class InterfazConvocados extends javax.swing.JFrame {
 
     private void bt2ActionPerformed(java.awt.event.ActionEvent evt) {                                           
         listaPortero.setListData(listaJugadores.getSelectedValues());
+        listaJugadores.remove(listaJugadores.getSelectedIndex());
+        
     }                                   
 
     private void bt3ActionPerformed(java.awt.event.ActionEvent evt) {                                    

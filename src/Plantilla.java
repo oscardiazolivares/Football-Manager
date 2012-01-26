@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Plantilla {
 	List<Futbolista> listaFutbolistas = new ArrayList<Futbolista>();
 	
@@ -57,15 +56,6 @@ public class Plantilla {
 			listaFutbolistas.add(new Futbolista(19, "J.Molina", false, 0, 77, 34, 77, 95, false, 70, 50, "dl", false));
 			listaFutbolistas.add(new Futbolista(19, "Ruben Castro", false, 0, 80, 35, 80, 90, false, 68, 50, "dl", false));
 			listaFutbolistas.add(new Futbolista(19, "J.Pereira", false, 0, 75, 32, 77, 80, false, 67, 50, "dl", false));
-
-
-
-
-
-
-
-
-
 
 
 		}
