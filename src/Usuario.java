@@ -26,8 +26,8 @@ public class Usuario {
 
 	public void crearAmistoso(boolean humano) {
 		Manager[] mana = new Manager[2];
-		mana[0]= new Manager(new Equipo("betis"), Boolean.TRUE);
-		mana[1]= new Manager(new Equipo("at madrid"),  Boolean.TRUE);
+		mana[0]= new Manager("betis", Boolean.TRUE);
+		mana[1]= new Manager("at madrid",  Boolean.TRUE);
 	}
 
 	

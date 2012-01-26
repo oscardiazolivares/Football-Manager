@@ -10,8 +10,8 @@ public class Juego {
 		resultado[1] = 0;
 	}
 
-	public void jugar() {
-		int jugadasLocal = 0, jugadasVisitante = 0, cons = 15;
+	public int[] jugar() {
+		int jugadasLocal = 0, jugadasVisitante = 0, cons = 5;
 		int ataqueLocal, ataqueVisitante, defensaLocal, defensaVisitante, tecnicaLocal, tecnicaVisitante, porteroLocal, porteroVisitante;
 		ataqueLocal = local.getAlineacion().calcularAtaque();
 		defensaLocal = local.getAlineacion().calcularDefensa();
@@ -21,8 +21,8 @@ public class Juego {
 		defensaVisitante = visitante.getAlineacion().calcularDefensa();
 		tecnicaVisitante = visitante.getAlineacion().calcularTecnica();
 		porteroVisitante = visitante.getAlineacion().calcularPortero();
-		jugadasLocal = Math.round(tecnicaLocal / 20);
-		jugadasVisitante = Math.round(tecnicaVisitante / 20);
+		jugadasLocal = Math.round(tecnicaLocal / 14);
+		jugadasVisitante = Math.round(tecnicaVisitante / 14);
 
 		for (int i = 0; i < jugadasLocal; i++) {
 			if (ataqueLocal * Math.random() > defensaVisitante * Math.random()
@@ -246,6 +246,8 @@ public class Juego {
 				}
 			}
 		}
+		System.out.println("Resultado: "+resultado[0]+"-"+resultado[1]);
+		return resultado;
 	}
 
 }

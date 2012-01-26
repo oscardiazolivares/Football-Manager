@@ -16,6 +16,6 @@ public class InterfazOpcionesArchivo {
 			System.out.println(jfc.getSelectedFile());
 		
 		frameArchivo.setVisible(true);
-		frameArchivo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//frameArchivo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }

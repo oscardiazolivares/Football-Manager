@@ -11,9 +11,9 @@ public class Partido {
 		return managers[posicion];
 	}
 	
-	public void jugarPartido(){
+	public int[] jugarPartido(){
 		Juego partido = new Juego(getManager(0).getEquipo(),getManager(1).getEquipo());
-		partido.jugar();
+		return(partido.jugar());
 	}
 	
 }

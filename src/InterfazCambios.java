@@ -39,7 +39,7 @@ public class InterfazCambios extends javax.swing.JFrame {
         bt7 = new javax.swing.JButton();
         btGuardar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        //setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lbBanquillo.setText("Banquillo");
 

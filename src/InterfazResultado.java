@@ -1,10 +1,12 @@
 public class InterfazResultado extends javax.swing.JFrame {
 
+	int[] resultado = new int[2];
+	Manager[] managers = new Manager[2];
     /**
      * Creates new form InterfazResultado
      */
-    public InterfazResultado() {
-        initComponents();
+    public InterfazResultado(Manager[] managers, int[] resultado) {
+        initComponents(managers, resultado);
     }
 
     /**
@@ -14,10 +16,11 @@ public class InterfazResultado extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">
-    private void initComponents() {
-
-        lbEquipo1 = new javax.swing.JLabel();
-        lbEquipo2 = new javax.swing.JLabel();
+    private void initComponents(Manager[] managers, int[] resultado) {
+    	this.resultado = resultado;
+    	this.managers = managers;
+        lbEquipo1 = new javax.swing.JLabel(managers[0].getEquipo().getNombre());
+        lbEquipo2 = new javax.swing.JLabel(managers[1].getEquipo().getNombre());
         jScrollPane1 = new javax.swing.JScrollPane();
         pantxtEquipo1 = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -32,12 +35,14 @@ public class InterfazResultado extends javax.swing.JFrame {
         listaLesionados1 = new javax.swing.JList();
         btCambiar = new javax.swing.JButton();
         btJugarSiguiente = new javax.swing.JButton();
+        
+        
+        //Ponemos los resultados en las cajas de texto
+        pantxtEquipo1.setText(String.valueOf(this.resultado[0]));
+        pantxtEquipo2.setText(String.valueOf(this.resultado[1]));
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lbEquipo1.setText("Equipo1");
-
-        lbEquipo2.setText("Equipo2");
+        //this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jScrollPane1.setViewportView(pantxtEquipo1);
 
@@ -158,50 +163,17 @@ public class InterfazResultado extends javax.swing.JFrame {
     }
 
     private void btJugarSiguienteActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+    	Partido amistoso = new Partido(managers);  
+    	int[] res = amistoso.jugarPartido();
+    	resultado[0]+=res[0];
+    	resultado[1]+=res[1];
+    	//Ponemos los resultados en las cajas de texto
+        pantxtEquipo1.setText(String.valueOf(this.resultado[0]));
+        pantxtEquipo2.setText(String.valueOf(this.resultado[1]));
+        btJugarSiguiente.setVisible(false);
+        btCambiar.setVisible(false);
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /*
-         * Set the Nimbus look and feel
-         */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /*
-         * If Nimbus (introduced in Java SE 6) is not available, stay with the
-         * default look and feel. For details see
-         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazResultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazResultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazResultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazResultado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /*
-         * Create and display the form
-         */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-
-            public void run() {
-                new InterfazResultado().setVisible(true);
-            }
-        });
-    }
     // Variables declaration - do not modify
     private javax.swing.JButton btCambiar;
     private javax.swing.JButton btJugarSiguiente;

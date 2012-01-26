@@ -162,25 +162,25 @@ public class InterfazAmistoso extends javax.swing.JFrame {
 
     private void btJugarActionPerformed(java.awt.event.ActionEvent evt) {
         String nombreEquipo1 = comboEquipo1.getSelectedItem().toString();
-    	Plantilla equipo1 = new Plantilla(nombreEquipo1);
     	
     	String nombreEquipo2 = comboEquipo2.getSelectedItem().toString();
-    	Plantilla equipo2 = new Plantilla(nombreEquipo2);
-    	
-    	Equipo eq1 = new Equipo(nombreEquipo1);
+
     	Manager[] managers = new Manager[2];
     	
-    	managers[0] = new Manager(eq1, false);
+    	managers[0] = new Manager(nombreEquipo1, false);
     	
-    	Equipo eq2 = new Equipo(nombreEquipo2);
-    	managers[1] = new Manager(eq2, false);
+    	managers[1] = new Manager(nombreEquipo2, false);
     	
-    	Partido amistoso = new Partido(managers);
-    	amistoso.jugarPartido();
+    	Partido amistoso = new Partido(managers);        	
+    	
+    	InterfazResultado ir = new InterfazResultado(managers, amistoso.jugarPartido());
+    	ir.setVisible(true);
     }
 
     private void btVolverActionPerformed(java.awt.event.ActionEvent evt) {
-        
+        this.setVisible(false);
+        InterfazPrincipal ip = new InterfazPrincipal();
+        ip.setVisible(true);
     }
 
     /**

@@ -44,7 +44,7 @@ public class InterfazConvocados extends javax.swing.JFrame {
         listaBanquillo = new javax.swing.JList();
         btGuardar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        //setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lbJugadores.setText("Jugadores");
 
