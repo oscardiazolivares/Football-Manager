@@ -36,14 +36,14 @@ public class Juego {
 		double lesion = (1 - jugador2.getResistenciaLesiones()) / 100
 				+ Math.random();
 		lesion += (1 - jugador2.getResistenciaLesiones()) / 100 + Math.random();
-		if (lesion >= 2.0) {
+		if (lesion >= 1.8) {
 			jugador2.setLesion(true);
 			System.out.println(jugador2.getNombre() + " lesionado!!!");
 		}
 
-		double tarjeta = jugador2.getAgresividad() / 100 + Math.random();
-		tarjeta += jugador2.getAgresividad() / 100 + Math.random();
-		if (tarjeta >= 3.5) {
+		double tarjeta = (float)jugador2.getAgresividad() / 100 + Math.random();
+		tarjeta += (float)jugador2.getAgresividad() / 100 + Math.random();
+		if (tarjeta >= 3.4) {
 			jugador2.setSancion(true);
 			System.out.println("!!!Roja directa " + jugador2.getNombre()
 					+ " expulsado!!!");
@@ -61,14 +61,14 @@ public class Juego {
 					+ Math.random();
 			lesion += (1 - jugador.getResistenciaLesiones()) / 100
 					+ Math.random();
-			if (lesion >= 2.0) {
+			if (lesion >= 1.8) {
 				jugador.setLesion(true);
 				System.out.println(jugador.getNombre() + " lesionado!!!");
 			}
 
-			tarjeta = jugador.getAgresividad() / 100 + Math.random();
-			tarjeta += jugador.getAgresividad() / 100 + Math.random();
-			if (tarjeta >= 3.5) {
+			tarjeta = (float)jugador.getAgresividad() / 100 + Math.random();
+			tarjeta += (float)jugador.getAgresividad() / 100 + Math.random();
+			if (tarjeta >= 3.4) {
 				jugador.setSancion(true);
 				System.out.println("!!!Roja directa " + jugador.getNombre()
 						+ " expulsado!!!");
@@ -87,14 +87,14 @@ public class Juego {
 					+ Math.random();
 			lesion += (1 - jugador.getResistenciaLesiones()) / 100
 					+ Math.random();
-			if (lesion >= 2.0) {
+			if (lesion >= 1.8) {
 				jugador.setLesion(true);
 				System.out.println(jugador.getNombre() + " lesionado!!!");
 			}
 
-			tarjeta = jugador.getAgresividad() / 100 + Math.random();
-			tarjeta += jugador.getAgresividad() / 100 + Math.random();
-			if (tarjeta >= 3.5) {
+			tarjeta = (float)jugador.getAgresividad() / 100 + Math.random();
+			tarjeta += (float)jugador.getAgresividad() / 100 + Math.random();
+			if (tarjeta >= 3.4) {
 				jugador.setSancion(true);
 				System.out.println("!!!Roja directa " + jugador.getNombre()
 						+ " expulsado!!!");
@@ -113,14 +113,14 @@ public class Juego {
 					+ Math.random();
 			lesion += (1 - jugador.getResistenciaLesiones()) / 100
 					+ Math.random();
-			if (lesion >= 2.0) {
+			if (lesion >= 1.8) {
 				jugador.setLesion(true);
 				System.out.println(jugador.getNombre() + " lesionado!!!");
 			}
 
-			tarjeta = jugador.getAgresividad() / 100 + Math.random();
-			tarjeta += jugador.getAgresividad() / 100 + Math.random();
-			if (tarjeta >= 3.5) {
+			tarjeta = (float)jugador.getAgresividad() / 100 + Math.random();
+			tarjeta += (float)jugador.getAgresividad() / 100 + Math.random();
+			if (tarjeta >= 3.4) {
 				jugador.setSancion(true);
 				System.out.println("!!!Roja directa " + jugador.getNombre()
 						+ " expulsado!!!");
@@ -145,14 +145,14 @@ public class Juego {
 		jugador2 = visitante.getAlineacion().portero;
 		lesion = (1 - jugador2.getResistenciaLesiones()) / 100 + Math.random();
 		lesion += (1 - jugador2.getResistenciaLesiones()) / 100 + Math.random();
-		if (lesion >= 2.0) {
+		if (lesion >= 1.8) {
 			jugador2.setLesion(true);
 			System.out.println(jugador2.getNombre() + " lesionado!!!");
 		}
 
-		tarjeta = jugador2.getAgresividad() / 100 + Math.random();
-		tarjeta += jugador2.getAgresividad() / 100 + Math.random();
-		if (tarjeta >= 3.5) {
+		tarjeta = (float)jugador2.getAgresividad() / 100 + Math.random();
+		tarjeta += (float)jugador2.getAgresividad() / 100 + Math.random();
+		if (tarjeta >= 3.4) {
 			jugador2.setSancion(true);
 			System.out.println("!!!Roja directa " + jugador2.getNombre()
 					+ " expulsado!!!");
@@ -171,14 +171,14 @@ public class Juego {
 					+ Math.random();
 			lesion += (1 - jugador.getResistenciaLesiones()) / 100
 					+ Math.random();
-			if (lesion >= 2.0) {
+			if (lesion >= 1.8) {
 				jugador.setLesion(true);
 				System.out.println(jugador.getNombre() + " lesionado!!!");
 			}
 
-			tarjeta = jugador.getAgresividad() / 100 + Math.random();
-			tarjeta += jugador.getAgresividad() / 100 + Math.random();
-			if (tarjeta >= 3.5) {
+			tarjeta = (float)jugador.getAgresividad() / 100 + Math.random();
+			tarjeta += (float)jugador.getAgresividad() / 100 + Math.random();
+			if (tarjeta >= 3.4) {
 				jugador.setSancion(true);
 				System.out.println("!!!Roja directa " + jugador.getNombre()
 						+ " expulsado!!!");
@@ -198,14 +198,14 @@ public class Juego {
 					+ Math.random();
 			lesion += (1 - jugador.getResistenciaLesiones()) / 100
 					+ Math.random();
-			if (lesion >= 2.0) {
+			if (lesion >= 1.8) {
 				jugador.setLesion(true);
 				System.out.println(jugador.getNombre() + " lesionado!!!");
 			}
 
-			tarjeta = jugador.getAgresividad() / 100 + Math.random();
-			tarjeta += jugador.getAgresividad() / 100 + Math.random();
-			if (tarjeta >= 3.5) {
+			tarjeta = (float)jugador.getAgresividad() / 100 + Math.random();
+			tarjeta += (float)jugador.getAgresividad() / 100 + Math.random();
+			if (tarjeta >= 3.4) {
 				jugador.setSancion(true);
 				System.out.println("!!!Roja directa " + jugador.getNombre()
 						+ " expulsado!!!");
@@ -225,14 +225,14 @@ public class Juego {
 					+ Math.random();
 			lesion += (1 - jugador.getResistenciaLesiones()) / 100
 					+ Math.random();
-			if (lesion >= 2.0) {
+			if (lesion >= 1.8) {
 				jugador.setLesion(true);
 				System.out.println(jugador.getNombre() + " lesionado!!!");
 			}
 
-			tarjeta = jugador.getAgresividad() / 100 + Math.random();
-			tarjeta += jugador.getAgresividad() / 100 + Math.random();
-			if (tarjeta >= 3.5) {
+			tarjeta = (float)jugador.getAgresividad() / 100 + Math.random();
+			tarjeta += (float)jugador.getAgresividad() / 100 + Math.random();
+			if (tarjeta >= 3.4) {
 				jugador.setSancion(true);
 				System.out.println("!!!Roja directa " + jugador.getNombre()
 						+ " expulsado!!!");
